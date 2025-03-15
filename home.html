@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="assets/3B823468-4952-4312-B762-B8EFF1D30B68.png">
+    <link rel="stylesheet" href="./index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Italiana&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button id="details-popup-open">Details</button>
+    
+    <div class="details" id="details">
+        <div class="details-inner">
+            <h3>Title of Popup</h3>
+            <ul>
+                <li>details</li>
+                <li>details</li>
+            </ul>
+    
+            <h4>Endangered Species in the Area:</h4>
+            <p>Species Name</p>
+            <ul>
+                <li>Spawning Period:</li>
+            </ul>
+            <div id="closeBtn">
+                <button id="details-popup-close">Close</button>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div id="map-legend">
+        <div class="legend-item">
+            <div id="sensitive-area">
+            </div>
+            <h5>Sensitive Areas</h5>
+        </div>
+        
+        <div class="legend-item">
+            <div id="sensitive-area">
+            </div>
+            <h5>Sensitive Areas</h5>
+        </div>
+        
+        <div class="legend-item">
+            <div id="sensitive-area">
+            </div>
+            <h5>Sensitive Areas</h5>
+        </div>
+    </div>
+
+    <script>
+        const openPopup = document.getElementById("details-popup-open");
+        const closePopup = document.getElementById("details-popup-close");
+        const details = document.getElementById("details");
+
+        openPopup.addEventListener("click", () =>{
+            details.classList.add("open");
+        });
+        closePopup.addEventListener("click", () =>{
+            details.classList.remove("open");
+        });
+    </script>
+</body>
+</html>
