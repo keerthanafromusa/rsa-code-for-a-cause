@@ -12,9 +12,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Italiana&display=swap" rel="stylesheet">
 </head>
+
+<style> iframe { width: 100%; height: 95vh; border: none; } </style>
 <body>
 
-    <button id="details-popup-open">Details</button>
+     <!-- Embed the generated Folium map --> 
+      <iframe src="map.html"></iframe>
+
+      <button id="more-details-button" onclick="location.href = 'more-details.html'">More Details</button>
     
     <div class="details" id="details">
         <div class="details-inner">
@@ -36,37 +41,26 @@
         </div>
         
     </div>
+    
     <div id="map-legend">
+        
         <div class="legend-item">
-            <div id="sensitive-area">
+            <p>Vegetation Health</p>
+            <div id="veggie-health-key">
             </div>
-            <h5>Sensitive Areas</h5>
+            <p>Unhealthy........Healthy</p>
         </div>
         
         <div class="legend-item">
-            <div id="sensitive-area">
+            <p>Water Quality</p>
+            <div id="water-quality-key">
             </div>
-            <h5>Sensitive Areas</h5>
-        </div>
-        
-        <div class="legend-item">
-            <div id="sensitive-area">
-            </div>
-            <h5>Sensitive Areas</h5>
+            <p>Polluted............Normal</p>
         </div>
     </div>
 
     <script>
-        const openPopup = document.getElementById("details-popup-open");
-        const closePopup = document.getElementById("details-popup-close");
-        const details = document.getElementById("details");
-
-        openPopup.addEventListener("click", () =>{
-            details.classList.add("open");
-        });
-        closePopup.addEventListener("click", () =>{
-            details.classList.remove("open");
-        });
+        
     </script>
 </body>
 </html>
